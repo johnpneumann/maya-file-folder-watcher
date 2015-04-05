@@ -1,0 +1,51 @@
+Watchdog Install Instructions
+
+** As a note, setup tools (easy_install) is dated and does not seem to be actively maintained. It would be beneficial for you to install distribute and then install pip then use easy_install to install pip and use "pip install watchdog" instead. Distribute can be downloaded from here: http://packages.python.org/distribute/ If distribute fails to install, run it as root (or on windows run the cmd shell as an administrator): eg, sudo python distribute_setup.py
+
+Both setup tools ez_setup.py and distributes distribute_setup.py are located in the libs directory
+
+---------------------
+Windows Instructions:
+
+Setup Tools main page: http://pypi.python.org/pypi/setuptools
+If you don't have setup tools (easy_install) installed follow these instructions-
+
+	easy_install from Setup Tools on windows 64 is easier than they make it seem. It doesn't support it through the main windows installer, but it's so easy to setup that it doesn't even matter.
+
+
+	You can either use the ez_setup.py file included or you can go download the source .tar.gz file (as of this writing it's 0.6c11): http://pypi.python.org/pypi/setuptools#files
+	
+	If you downloaded it: Extract the only file you'll need: ez_setup.py (you can extract the whole thing, but why waste the time or space)
+	
+	Everyone come along now! Open a dos prompt (windows key+r and type cmd and hit enter) and go to the directory that the ez_setup.py file is in. Run ez_setup.py
+	
+	That's it... Kinda.
+	
+	You'll also need to set the PATH to include your Python installs Scripts directory (in my case C:\Python26\Scripts\) You can do it the traditional way of going through the computer properties or you can type: setx path "%PATH%;C:\Python26\Scripts\" in the cmd window which will do it for you (as a note the setx command is only available on xp sp2)
+
+	Now close the cmd window. Open a new cmd window. Type in easy_install watchdog
+
+	Done!
+
+If you have setup tools installed follow these instructions-
+
+	easy_install watchdog
+	
+If you want to use pip (you can omit easy_install pip if you have it installed already - obvious yes, but sometimes it's not obvious for new folks:
+	easy_install pip
+	pip install watchdog
+	
+That's it.
+---------------------
+OSX Instructions:
+
+	To my knowledge easy_install is installed by default on Leopard and Snow Leopard. So just run easy_install watchdog in a terminal window and you're good to go.
+	
+If you want to use pip, do the following: 
+	easy_install pip; pip install watchdog
+
+Done.
+---------------------	
+Linux Instructions:
+	
+	I currently don't have a working Linux install so I can't really comment on installing setup tools, distribute or pip. However, the OSX commands should work the exact same on Linux as they do on OSX (with variances on where the files are called from and installed depending on your distribution - Debian/Ubuntu, Red Hat/Fedora, {or if you're insane about what you want installed in your kernel like I was} Gentoo, etc).
